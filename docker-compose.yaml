@@ -1,0 +1,11 @@
+services:
+  codeql:
+    container_name: codeql
+    command: tail -f /dev/null
+    build:
+      context: app
+      dockerfile: ../docker/codeql.Dockerfile
+    volumes:
+      - ./app:/app
+    environment:
+      - SNYK_TOKEN=dasdqm3kk44kdm3k123dm
